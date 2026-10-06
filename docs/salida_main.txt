@@ -1,0 +1,55 @@
+--- CLICKANDGO ---
+
+1. Polimorfismo: procesar_Entrega()
+Producto físico: se entrega por despacho.
+Producto digital: descarga en https://example.com/descarga
+Servicio: atención agendada para el 20-12-2026
+Flete del producto físico: 3500
+
+2. Validación: setter de Cliente.correo
+Correo válido: cliente@example.com
+validar_Correo(): True
+validar_Rut(): True
+Error capturado: El correo debe tener arroba, punto y no tener espacios.
+Se conserva el correo anterior: cliente@example.com
+
+3. ProductoElectronico.calcular_Precio()
+Precio con dólar de ejemplo: 95000
+
+4. Administrador y encargado de bodega
+Precio digital cambiado por el administrador: 7500
+
+5. Pedido con sus líneas de detalle
+Línea: 1
+Cantidad: 2
+Precio unitario: 15000
+Subtotal: 30000
+Línea: 2
+Cantidad: 1
+Precio unitario: 7500
+Subtotal: 7500
+Línea: 3
+Cantidad: 1
+Precio unitario: 25000
+Subtotal: 25000
+Línea: 4
+Cantidad: 1
+Precio unitario: 95000
+Subtotal: 95000
+Total de productos, sin flete: 157500
+Pedidos del cliente: 1
+Pedido confirmado: True
+Stock físico restante: 3
+Luis está preparando el pedido.
+
+6. Regla de stock: Pedido.confirmar()
+StockInsuficienteError capturado: No hay stock suficiente para confirmar.
+El programa continúa.
+
+7. Regla de pago: Pedido.despachar()
+PedidoNoPagadoError capturado: No se puede despachar un pedido sin pagar.
+El programa continúa.
+Pedido pagado: True
+Pedido despachado: True
+
+Fin de la demostración.
